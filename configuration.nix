@@ -1,49 +1,55 @@
-{ config, lib, pkgs, ... };
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-    imports = 
-        [
-            ./hardware-configuration.nix
-        ];
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+  imports = [
+    ./hardware-configuration.nix
+  ];
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
-    networking.hostName = "nixos-btw"
+  networking.hostName = "nixos-btw";
 
-        networking.wireless.enable = true;
+  networking.wireless.enable = true;
 
-    time.timeZone = "India/Calcutta";
+  time.timeZone = "India/Calcutta";
 
-    services.xserver = {
-        enable = true;
-        autoRepeatDelay = 200;
-        autoRepeatInterval = 35;
-        windowManager.qtile.enable = true;
-    }
-        services.displayManager.ly.enable = true;
+  services.xserver = {
+    enable = true;
+    autoRepeatDelay = 200;
+    autoRepeatInterval = 35;
+    windowManager.qtile.enable = true;
+  };
+  services.displayManager.ly.enable = true;
 
-    users.users.walrus= {
-        isNormalUser = true;
-        extraGroups = [ "wheel" ];
-        packages = with pkgs; [
-            tree
-        ];
-    };
-
-    programs.firefox.enable = true;
-
-    environment.systemPackages = with pkgs; [
-        vim
-        wget
-        git
-        alacritty
+  users.users.walrus = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ];
+    packages = with pkgs; [
+      tree
     ];
+  };
 
-    fonts.packages = with pkgs; [
-        nerd-fonts.jetbrains-mono
-    ];
+  programs.firefox.enable = true;
 
-    nix.settings.experimental-features = [ "nix-command" "flakes"];
-    system.stateVersion = "25.05";
+  environment.systemPackages = with pkgs; [
+    vim
+    wget
+    git
+    alacritty
+  ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+  ];
+
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+  system.stateVersion = "25.05";
 }
-
