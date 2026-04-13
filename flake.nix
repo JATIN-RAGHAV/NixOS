@@ -11,7 +11,7 @@
     {
       self,
       nix-darwin,
-        nixpkgs
+      nixpkgs,
     }:
     let
       configuration =
@@ -19,6 +19,10 @@
         {
           environment.systemPackages = [
             pkgs.neovim
+            pkgs.gpp
+            pkgs.gcc
+            pkgs.clang
+            pkgs.clang-tools
             pkgs.btop
             pkgs.lsd
             pkgs.tmux
@@ -80,6 +84,7 @@
             pkgs.hdrhistogram_c
             pkgs.premake
             pkgs.ripgrep
+            pkgs.gh
           ];
 
           nix.settings.experimental-features = "nix-command flakes";
