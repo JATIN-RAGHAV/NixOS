@@ -79,6 +79,7 @@
             premake
             ripgrep
             tmux
+            pkgs.tealdeer
           ];
 
           nix.settings.experimental-features = "nix-command flakes";
