@@ -19,6 +19,7 @@
         {
           environment.systemPackages = with pkgs; [
             bash
+            postgresql
             brotli
             btop
             cairo
