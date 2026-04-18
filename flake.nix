@@ -18,7 +18,11 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
+            terraform-lsp
+            awscli2
+            python3
             qemu
+            terraform
             bash
             postgresql
             brotli
@@ -81,7 +85,7 @@
             premake
             ripgrep
             tmux
-            pkgs.tealdeer
+            tealdeer
           ];
 
           nix.settings.experimental-features = "nix-command flakes";
@@ -98,6 +102,8 @@
 
           # The platform the configuration will be used on.
           nixpkgs.hostPlatform = "aarch64-darwin";
+
+          nixpkgs.config.allowUnfree = true;
         };
     in
     {
