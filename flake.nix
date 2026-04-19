@@ -18,6 +18,7 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
+            aerospace
             terraform-lsp
             awscli2
             python3
