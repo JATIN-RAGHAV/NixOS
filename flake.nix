@@ -18,6 +18,7 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
+            starship
             aerospace
             terraform-lsp
             awscli2
@@ -90,7 +91,6 @@
           ];
 
           nix.settings.experimental-features = "nix-command flakes";
-
 
           # Set Git commit hash for darwin-version.
           system.configurationRevision = self.rev or self.dirtyRev or null;
