@@ -18,6 +18,8 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
+            stow
+            zoxide
             starship
             aerospace
             terraform-lsp
