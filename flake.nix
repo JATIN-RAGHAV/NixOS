@@ -19,6 +19,7 @@
         {
           environment.systemPackages = with pkgs; [
             stow
+            zinit
             zoxide
             starship
             aerospace
