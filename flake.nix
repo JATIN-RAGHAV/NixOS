@@ -18,6 +18,7 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
+            pass
             fd
             stow
             zinit
