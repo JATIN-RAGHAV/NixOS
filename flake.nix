@@ -18,7 +18,11 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
+            tailwindcss-language-server
+            jdt-language-server
+            quarkus
             pass
+            htop
             fd
             stow
             zinit
