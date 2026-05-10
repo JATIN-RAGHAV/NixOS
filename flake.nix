@@ -18,6 +18,7 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
+            redis
             tailwindcss-language-server
             jdt-language-server
             quarkus
