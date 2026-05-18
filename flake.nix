@@ -18,6 +18,7 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
+            uv
             redis
             tailwindcss-language-server
             jdt-language-server
