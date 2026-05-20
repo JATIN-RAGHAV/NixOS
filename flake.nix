@@ -18,6 +18,9 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
+            rustc
+            rustup
+            rust-analyzer
             uv
             redis
             tailwindcss-language-server
