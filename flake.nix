@@ -18,6 +18,8 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
+            clippy
+            rustfmt
             rustc
             rustup
             rust-analyzer
