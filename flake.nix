@@ -18,6 +18,7 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
+            nmap
             cargo
             clippy
             rustfmt
