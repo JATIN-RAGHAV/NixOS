@@ -18,14 +18,10 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
+            gdb
             libiconv
             nmap
-            cargo
-            clippy
-            rustfmt
-            rustc
             rustup
-            rust-analyzer
             uv
             redis
             tailwindcss-language-server
