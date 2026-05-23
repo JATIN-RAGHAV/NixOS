@@ -18,6 +18,7 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
+            libiconv
             nmap
             cargo
             clippy
@@ -107,6 +108,10 @@
             tmux
             tealdeer
           ];
+
+          environment.variables = {
+            LIBRARY_PATH = "${pkgs.libiconv}/lib";
+          };
 
           nix.settings.experimental-features = "nix-command flakes";
 
