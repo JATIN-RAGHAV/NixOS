@@ -18,91 +18,92 @@
         { pkgs, ... }:
         {
           environment.systemPackages = with pkgs; [
-            gdb
-            libiconv
-            nmap
-            rustup
-            uv
-            redis
-            tailwindcss-language-server
-            jdt-language-server
-            quarkus
-            pass
-            htop
+            # col tools
+            aerospace
+            brotli
+            cowsay
+            dav1d
             fd
+            ffmpeg
+            ghidra
+            giflib
+            gmp
+            lolcat
+            lsd
+            neovim
+            nmap
+            qemu
+            ripgrep
+            starship
             stow
+            tealdeer
+            tmux
             zinit
             zoxide
-            starship
-            aerospace
-            terraform-lsp
-            awscli2
+
+            # Language stuff
+            go
+            gopls
+            jdt-language-server
+            lua-language-server
+            lua5_5
+            luajit
+            nixfmt
+            pcre2
             python3
-            qemu
-            terraform
-            bash
-            postgresql
-            brotli
-            btop
-            cairo
-            capstone
+            quarkus
+            rustup
+            tailwindcss-language-server
+            uv
+
+            # Programming Tools
+            awscli2
             clang
             clang-tools
             cmake
-            cowsay
-            curl
-            dav1d
             docker-language-server
+            gcc
+            gh
+            ninja
+            nodejs_24
+            postgresql
+            premake
+            redis
+            terraform
+            terraform-lsp
+
+            # Linux Libraries and tools
+            bash
+            btop
+            curl
             dtc
-            ffmpeg
             fmt
             fontconfig
             freetype
-            gcc
+            gdb
             gettext
-            gh
-            ghidra
-            giflib
             git
             glib
-            gmp
             gnutls
-            go
-            gopls
             gpp
             graphite2
             harfbuzz
             hdrhistogram_c
+            htop
             libxext
             libxrender
             libzip
-            llhttp
-            lolcat
-            lsd
-            lua
-            lua-language-server
-            luajit
             lz4
             lzo
-            mpdecimal
             mpfr
             ncurses
             nettle
-            neovim
-            ninja
-            nixfmt
             nmap
-            nodejs_24
             oniguruma
             openssl
             p11-kit
-            pcre2
             pixman
             pkgconf
-            premake
-            ripgrep
-            tmux
-            tealdeer
           ];
 
           environment.variables = {
