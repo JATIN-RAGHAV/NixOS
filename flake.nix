@@ -25,6 +25,7 @@
             dav1d
             fd
             ffmpeg
+            fzf
             ghidra
             giflib
             gmp
@@ -38,6 +39,7 @@
             stow
             tealdeer
             tmux
+            yazi
             zinit
             zoxide
 
