@@ -23,6 +23,7 @@
             brotli
             cowsay
             dav1d
+            fastfetch
             fd
             ffmpeg
             fzf
