@@ -20,6 +20,7 @@
           environment.systemPackages = with pkgs; [
             # col tools
             aerospace
+            bat
             brotli
             cowsay
             dav1d
