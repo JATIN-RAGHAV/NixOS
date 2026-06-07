@@ -19,6 +19,7 @@
         {
           environment.systemPackages = with pkgs; [
             # col tools
+            sl
             aerospace
             bat
             brotli
@@ -67,6 +68,7 @@
             cmake
             docker-language-server
             gcc
+            llvm
             gh
             ninja
             nodejs_24
