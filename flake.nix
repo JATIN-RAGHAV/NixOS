@@ -19,7 +19,6 @@
         {
           environment.systemPackages = with pkgs; [
             # col tools
-            sl
             aerospace
             bat
             brotli
@@ -38,6 +37,7 @@
             nmap
             qemu
             ripgrep
+            sl
             starship
             stow
             tealdeer
@@ -68,8 +68,10 @@
             cmake
             docker-language-server
             gcc
-            llvm
             gh
+            kubectl
+            llvm
+            minikube
             ninja
             nodejs_24
             postgresql
