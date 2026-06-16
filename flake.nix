@@ -58,6 +58,7 @@
             python3
             quarkus
             rustup
+            swift
             tailwindcss-language-server
             uv
 
